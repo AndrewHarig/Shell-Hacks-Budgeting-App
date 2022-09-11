@@ -1,0 +1,88 @@
+import { getGoogleValuesWrapperPrincipal,getGoogleValuesWrapperInterest, getGoogleValuesWrapperTerm, getGoogleValuesWrapperMonthyCost} from 'backend/googlesheet-wrapper-loan'
+
+export async function getValuesWrapperLn1(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loanloading').text = `Loading ...`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperPrincipal(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperLn2(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loanloading').text = `Loading ..`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperInterest(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperLn3(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loanloading').text = `Loading .`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperTerm(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperLn4(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loanloading').text = ``
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperMonthyCost(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+
+function validateRange(range) {
+    const regex = /([a-zA-Z0-9:!]+)/g;
+    const match = range.match(regex);
+    if (!match || match.length !== 1 || match[0] !== range) {
+        throw new Error(`Input range is invalid (got: ${range})`);
+    }
+}
+
+$w.onReady(function () {
+    loan_function();
+});
+
+async function loan_function() {
+	
+    const principal = (await getValuesWrapperLn1('B10'))[0]
+   	const interest = (await getValuesWrapperLn2('B10'))[0]
+    const term = (await getValuesWrapperLn3('B10'))[0]
+    const monthly = (await getValuesWrapperLn4('B10'))[0]
+
+	$w('#loanbox').text = `If you took out a \$${principal} loan at a ${interest}% interest rate for ${term} years it would cost \$${monthly} a month`
+    }
