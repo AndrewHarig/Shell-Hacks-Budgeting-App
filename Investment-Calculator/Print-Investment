@@ -1,0 +1,125 @@
+// // Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+
+// // Velo API Reference: https: //www.wix.com/velo/reference/api-overview/introduction
+
+import { getGoogleValuesWrapperInitialIn,getGoogleValuesWrapperRecurringIn, getGoogleValuesWrapperTimeIn,getGoogleValuesWrapperYearsIn,getGoogleValuesWrapperReturnRate, getGoogleValuesWrapperFinalValue  } from 'backend/googlesheet-wrapper-invest'
+export async function getValuesWrapperIn1(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loadingIn').text = `Loading ...`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperInitialIn(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperIn2(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loadingIn').text = `Loading ..`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperRecurringIn(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperIn3(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loadingIn').text = `Loading .`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperTimeIn(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperIn4(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loadingIn').text = `Loading ....`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperYearsIn(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperIn5(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loadingIn').text = `Loading ...`
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperReturnRate(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapperIn6(range) {
+    try {
+        validateRange(range);
+        try {
+            $w('#loadingIn').text = ``
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapperFinalValue(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+function validateRange(range) {
+    const regex = /([a-zA-Z0-9:!]+)/g;
+    const match = range.match(regex);
+    if (!match || match.length !== 1 || match[0] !== range) {
+        throw new Error(`Input range is invalid (got: ${range})`);
+    }
+}
+
+$w.onReady(function () {
+    registerHandler();
+});
+
+async function registerHandler() {
+	
+    const initialIn = (await getValuesWrapperIn1('B10'))[0]
+   	const payment = (await getValuesWrapperIn2('B10'))[0]
+    const time = (await getValuesWrapperIn3('B10'))[0]
+    const years = (await getValuesWrapperIn4('B10'))[0]
+    const  returnrate = (await getValuesWrapperIn5('B10'))[0]
+    const finalValue = (await getValuesWrapperIn6('B10'))[0]
+
+	$w('#investbox').text = `With an initial investment of \$${initialIn} and a payment of \$${payment} every ${time} months with a return rate of ${returnrate} you would have \$${finalValue} after ${years} years.`
+    }
+
