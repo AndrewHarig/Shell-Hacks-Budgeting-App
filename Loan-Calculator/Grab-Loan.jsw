@@ -1,0 +1,27 @@
+import { getValues, appendValues } from '@velo/google-sheets-integration-backend';
+import wixSecretsBackend from 'wix-secrets-backend';
+
+async function getSecretSheetId() {
+    const id = await wixSecretsBackend.getSecret('1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M');
+    return id;
+}
+export async function getGoogleValuesWrapperPrincipal() {
+    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const  Principal = await getValues(sheetId, 'E16' );
+    return Principal
+}
+export async function getGoogleValuesWrapperInterest() {
+    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const  Interest = await getValues(sheetId, 'E17' );
+    return Interest
+}
+export async function getGoogleValuesWrapperTerm() {
+    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const  Term = await getValues(sheetId, 'E18' );
+    return Term
+}
+export async function getGoogleValuesWrapperMonthyCost() {
+    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const  Monthly = await getValues(sheetId, 'E19' );
+    return Monthly
+}
