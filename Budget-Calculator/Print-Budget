@@ -1,0 +1,371 @@
+// Velo API Reference: https: //www.wix.com/velo/reference/api-overview/introduction
+
+import { getGoogleValuesWrapper1, getGoogleValuesWrapper2, getGoogleValuesWrapper21, getGoogleValuesWrapper22, getGoogleValuesWrapper3, getGoogleValuesWrapper31, getGoogleValuesWrapper32, getGoogleValuesWrapper4, getGoogleValuesWrapper41, getGoogleValuesWrapper42, getGoogleValuesWrapper5, getGoogleValuesWrapper51, getGoogleValuesWrapper52, getGoogleValuesWrapper6, getGoogleValuesWrapper61, getGoogleValuesWrapper62, getGoogleValuesWrapper7, getGoogleValuesWrapper71, getGoogleValuesWrapper72, getGoogleValuesWrapper8 } from 'backend/googlesheet-wrapper'
+
+export async function getValuesWrapper1(range) {
+    try {
+		$w('#loading').text = `Loading ...`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper1(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper2(range) {
+    try {
+		$w('#loading').text = `Loading ..`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper2(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper21(range) {
+    try {
+		$w('#loading').text = `Loading ....`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper21(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper22(range) {
+    try {
+		$w('#loading').text = `Loading ...`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper22(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}    
+
+export async function getValuesWrapper3(range) {
+    try {
+		$w('#loading').text = `Loading ..`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper3(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper31(range) {
+    try {
+		$w('#loading').text = `Loading ....`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper31(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper32(range) {
+    try {
+		$w('#loading').text = `Loading ...`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper32(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}    
+export async function getValuesWrapper4(range) {
+    try {
+		$w('#loading').text = `Loading ..`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper4(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper41(range) {
+    try {
+		$w('#loading').text = `Loading ....`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper41(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper42(range) {
+    try {
+		$w('#loading').text = `Loading ...`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper42(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}    
+export async function getValuesWrapper5(range) {
+    try {
+		$w('#loading').text = `Loading ..`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper5(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper51(range) {
+    try {
+		$w('#loading').text = `Loading ....`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper51(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper52(range) {
+    try {
+		$w('#loading').text = `Loading ...`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper52(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}    
+export async function getValuesWrapper6(range) {
+    try {
+		$w('#loading').text = `Loading ..`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper6(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper61(range) {
+    try {
+		$w('#loading').text = `Loading ....`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper61(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper62(range) {
+    try {
+		$w('#loading').text = `Loading ...`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper62(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+} 
+export async function getValuesWrapper7(range) {
+    try {
+		$w('#loading').text = `Loading ..`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper7(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper71(range) {
+    try {
+		$w('#loading').text = `Loading ....`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper71(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+export async function getValuesWrapper72(range) {
+    try {
+		$w('#loading').text = `Loading ...`
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper72(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}   
+export async function getValuesWrapper8(range) {
+    try {
+		$w('#loading').text = ``
+        validateRange(range);
+        try {
+            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const result = await getGoogleValuesWrapper8(sheetId, range);
+            const response = result.data.values;
+            return response;
+        } catch (err) {
+            return Promise.reject('Get values failed. Info: ' + err);
+        }
+    } catch (validationError) {
+        return Promise.reject(validationError.toString());
+    }
+}
+
+function validateRange(range) {
+    const regex = /([a-zA-Z0-9:!]+)/g;
+    const match = range.match(regex);
+    if (!match || match.length !== 1 || match[0] !== range) {
+        throw new Error(`Input range is invalid (got: ${range})`);
+    }
+}
+
+$w.onReady(function () {
+    registerHandlers();
+});
+
+async function registerHandlers() {
+	const income = (await getValuesWrapper1('B10'))[0]
+    const house = (await getValuesWrapper2('B10'))[0]
+    const house1 = (await getValuesWrapper21('B10'))[0]
+    const house2 = (await getValuesWrapper22('B10'))[0]
+    const GG = (await getValuesWrapper3('B10'))[0]
+    const GG1 = (await getValuesWrapper31('B10'))[0]
+    const GG2 = (await getValuesWrapper32('B10'))[0]
+    const Dining = (await getValuesWrapper4('B10'))[0]
+    const Dining1 = (await getValuesWrapper41('B10'))[0]
+    const Dining2 = (await getValuesWrapper42('B10'))[0]
+    const entertainment = (await getValuesWrapper5('B10'))[0]
+    const entertainment1 = (await getValuesWrapper51('B10'))[0]
+    const entertainment2 = (await getValuesWrapper52('B10'))[0]
+    const others = (await getValuesWrapper6('B10'))[0]
+    const others1 = (await getValuesWrapper61('B10'))[0]
+    const other2 = (await getValuesWrapper61('B10'))[0]
+    const savings = (await getValuesWrapper7('B10'))[0]
+    const savings1 = (await getValuesWrapper71('B10'))[0]
+    const savings2 = (await getValuesWrapper72('B10'))[0]
+    const leftovers = (await getValuesWrapper8('B10'))[0]
+	//console.log('values', values, house)
+	$w('#incomebox').text = `You made \$${income} this past month. Remember this will be less if you don't take taxes out of your check or wait to pay till the end of the year.`
+	$w('#housingbox').text = `You spent \$${house} on housing which is ${house1}% of your spending and ${house2}% of your income. Make sure you do your research and shop around and get a fair deal when renting or buying.`
+    $w('#gasbox').text = `You spent \$${GG} on gas and groceries which is ${GG1}% of your spending and ${GG2}% of your income. This a most necessary category but remember to shop generic brand or carpool when possible.`
+    $w('#diningbox').text = `You spent \$${Dining} on dining which is ${Dining1}% of your spending and ${Dining2}% of your income. Eating out is normally more expensive than cooking yourself. You can find great affordable recipes on places such as Youtube.`
+    $w('#entertainmentbox').text = `You spent \$${entertainment} on entertainment which is ${entertainment1}% of your spending and ${entertainment2}% of your income. You can have fun on a budget. There are plenty of fun date night idea on the internet.`
+    $w('#otherbox').text = `You spent \$${others} on others which is ${others1}% of your spending and ${other2}% of your income. Make sure you limit excessive spending as it will hurt you in the long and short run.`
+    $w('#savingsbox').text = `You spent \$${savings} on savings which is ${savings1}% of your spending and ${savings2}% of your income. You want this to be as high as possible. Make sure you have 3 months of income saved at any time for emergencies and invest what you can for retirement.You also have not spent \$${leftovers} which is best saved or invested.`
+
+
+}
+
