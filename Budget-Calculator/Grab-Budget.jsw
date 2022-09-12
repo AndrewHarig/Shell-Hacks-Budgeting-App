@@ -2,108 +2,107 @@ import { getValues, appendValues } from '@velo/google-sheets-integration-backend
 import wixSecretsBackend from 'wix-secrets-backend';
 
 async function getSecretSheetId() {
-    const id = await wixSecretsBackend.getSecret('1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M');
+    const id = await wixSecretsBackend.getSecret('wixSecretsBackend');
     return id;
 }
-//RangeError = (A1:B1000)
 
 export async function getGoogleValuesWrapper1() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const income = await getValues(sheetId, 'B10');
     return income
 }
 export async function getGoogleValuesWrapper2() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  house = await getValues(sheetId, 'B2' );
     return house
 }
 export async function getGoogleValuesWrapper21() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  house1 = await getValues(sheetId, 'C2' );
     return house1
 }
 export async function getGoogleValuesWrapper22() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  house2 = await getValues(sheetId, 'D2' );
     return house2
 }
 export async function getGoogleValuesWrapper3() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  GG = await getValues(sheetId, 'B3' );
     return GG
 }
 export async function getGoogleValuesWrapper31() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  GG1 = await getValues(sheetId, 'C3' );
     return GG1
 }
 export async function getGoogleValuesWrapper32() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  GG2 = await getValues(sheetId, 'D3' );
     return GG2
 }
 export async function getGoogleValuesWrapper4() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  dining = await getValues(sheetId, 'B4' );
     return dining
 }
 export async function getGoogleValuesWrapper41() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  dining1 = await getValues(sheetId, 'C4' );
     return dining1
 }
 export async function getGoogleValuesWrapper42() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  dining2 = await getValues(sheetId, 'D4' );
     return dining2
 }
 export async function getGoogleValuesWrapper5() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  entertainment = await getValues(sheetId, 'B5' );
     return entertainment
 }
 export async function getGoogleValuesWrapper51() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  entertainment1 = await getValues(sheetId, 'C5' );
     return entertainment1
 }
 export async function getGoogleValuesWrapper52() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  entertainment2 = await getValues(sheetId, 'D5' );
     return entertainment2
 }
 export async function getGoogleValuesWrapper6() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  others = await getValues(sheetId, 'B6' );
     return others
 }
 export async function getGoogleValuesWrapper61() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  others1 = await getValues(sheetId, 'C6' );
     return others1
 }
 export async function getGoogleValuesWrapper62() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  others2 = await getValues(sheetId, 'D6' );
     return others2
 }
 export async function getGoogleValuesWrapper7() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  savings = await getValues(sheetId, 'B7' );
     return savings
 }
 export async function getGoogleValuesWrapper71() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  savings1 = await getValues(sheetId, 'C7' );
     return savings1
 }
 export async function getGoogleValuesWrapper72() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  savings2 = await getValues(sheetId, 'D7' );
     return savings2
 }
 export async function getGoogleValuesWrapper8() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_your_sheets_link';
     const  leftover = await getValues(sheetId, 'B12' );
     return leftover
 }
