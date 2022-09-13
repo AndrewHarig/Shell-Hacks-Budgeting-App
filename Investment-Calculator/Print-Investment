@@ -8,7 +8,7 @@ export async function getValuesWrapperIn1(range) {
         validateRange(range);
         try {
             $w('#loadingIn').text = `Loading ...`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperInitialIn(sheetId, range);
             const response = result.data.values;
             return response;
@@ -24,7 +24,7 @@ export async function getValuesWrapperIn2(range) {
         validateRange(range);
         try {
             $w('#loadingIn').text = `Loading ..`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperRecurringIn(sheetId, range);
             const response = result.data.values;
             return response;
@@ -40,7 +40,7 @@ export async function getValuesWrapperIn3(range) {
         validateRange(range);
         try {
             $w('#loadingIn').text = `Loading .`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperTimeIn(sheetId, range);
             const response = result.data.values;
             return response;
@@ -56,7 +56,7 @@ export async function getValuesWrapperIn4(range) {
         validateRange(range);
         try {
             $w('#loadingIn').text = `Loading ....`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperYearsIn(sheetId, range);
             const response = result.data.values;
             return response;
@@ -72,7 +72,7 @@ export async function getValuesWrapperIn5(range) {
         validateRange(range);
         try {
             $w('#loadingIn').text = `Loading ...`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperReturnRate(sheetId, range);
             const response = result.data.values;
             return response;
@@ -88,7 +88,7 @@ export async function getValuesWrapperIn6(range) {
         validateRange(range);
         try {
             $w('#loadingIn').text = ``
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperFinalValue(sheetId, range);
             const response = result.data.values;
             return response;
