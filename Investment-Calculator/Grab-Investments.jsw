@@ -2,36 +2,36 @@ import { getValues, appendValues } from '@velo/google-sheets-integration-backend
 import wixSecretsBackend from 'wix-secrets-backend';
 
 async function getSecretSheetId() {
-    const id = await wixSecretsBackend.getSecret('1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M');
+    const id = await wixSecretsBackend.getSecret('end_of_sheets_link');
     return id;
 }
 export async function getGoogleValuesWrapperInitialIn() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_sheets_link';
     const  IntialIn = await getValues(sheetId, 'B16' );
     return IntialIn
 }
 export async function getGoogleValuesWrapperRecurringIn() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_sheets_link';
     const  RecurringIn = await getValues(sheetId, 'B17' );
     return RecurringIn
 }
 export async function getGoogleValuesWrapperTimeIn() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_sheets_link';
     const  TimeIn = await getValues(sheetId, 'B18' );
     return TimeIn
 }
 export async function getGoogleValuesWrapperYearsIn() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_sheets_link';
     const  YearsIn = await getValues(sheetId, 'B19' );
     return YearsIn
 }
 export async function getGoogleValuesWrapperReturnRate() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_sheets_link';
     const  ReturnRate = await getValues(sheetId, 'B20' );
     return ReturnRate
 }
 export async function getGoogleValuesWrapperFinalValue() {
-    const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+    const sheetId = 'end_of_sheets_link';
     const  FinalValue = await getValues(sheetId, 'Z1' );
     return FinalValue
 }
