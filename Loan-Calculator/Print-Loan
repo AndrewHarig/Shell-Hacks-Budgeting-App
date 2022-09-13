@@ -5,7 +5,7 @@ export async function getValuesWrapperLn1(range) {
         validateRange(range);
         try {
             $w('#loanloading').text = `Loading ...`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperPrincipal(sheetId, range);
             const response = result.data.values;
             return response;
@@ -21,7 +21,7 @@ export async function getValuesWrapperLn2(range) {
         validateRange(range);
         try {
             $w('#loanloading').text = `Loading ..`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperInterest(sheetId, range);
             const response = result.data.values;
             return response;
@@ -37,7 +37,7 @@ export async function getValuesWrapperLn3(range) {
         validateRange(range);
         try {
             $w('#loanloading').text = `Loading .`
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperTerm(sheetId, range);
             const response = result.data.values;
             return response;
@@ -53,7 +53,7 @@ export async function getValuesWrapperLn4(range) {
         validateRange(range);
         try {
             $w('#loanloading').text = ``
-            const sheetId = '1EETUKhePhEx-esXOarba2WUoY1gXQPSw8vj6q77Mx_M';
+            const sheetId = 'end_of_sheets_link';
             const result = await getGoogleValuesWrapperMonthyCost(sheetId, range);
             const response = result.data.values;
             return response;
